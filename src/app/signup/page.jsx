@@ -26,14 +26,16 @@ const Signup = () => {
       });
 
       const data = await res.json();
+
       if (!res.ok) {
-        throw new Error(data.error || "Signup failed");
+        throw new Error(data.message || "Signup failed");
       }
       alert("User created to DB");
       setName("");
       setEmail("");
       setMonthlyBudget("");
     } catch (error) {
+      alert(error.message);
       console.log(error.message);
     }
   };

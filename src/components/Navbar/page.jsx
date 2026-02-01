@@ -18,6 +18,8 @@ const Navbar = () => {
         <div className={styles.links}>
           <Link href="/">Home</Link>
           <Link href="/expenses">Expense</Link>
+          <Link href="/totalexpenses">Expense List</Link>
+          <Link href="/summary">Summary</Link>
           <Link href="/signup">SignUp</Link>
           <Link href="/login">Login</Link>
         </div>
@@ -32,6 +34,8 @@ const Navbar = () => {
         <div className={styles.links}>
           <Link href="/">Home</Link>
           <Link href="/expenses">Expense</Link>
+          <Link href="/totalexpenses">Expense List</Link>
+          <Link href="/summary">Summary</Link>
           <button onClick={logoutUser}>Logout</button>
         </div>
       </nav>

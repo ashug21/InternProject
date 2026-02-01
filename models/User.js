@@ -5,13 +5,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-
   email: {
     type: String,
     required: true,
     unique: true
   },
-
   monthlyBudget: {
     type: Number,
     required: true,
@@ -19,5 +17,5 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+module.exports =
+  mongoose.models.User || mongoose.model("User", userSchema);

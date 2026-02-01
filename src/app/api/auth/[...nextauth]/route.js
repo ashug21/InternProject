@@ -5,7 +5,7 @@ import User from "../../../../../models/User";
 
 export const authOptions = {
   session: {
-    strategy: "jwt",
+    strategy: "jwt"
   },
 
   secret: process.env.NEXTAUTH_SECRET,
@@ -14,7 +14,7 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { type: "email" },
+        email: { type: "email" }
       },
 
       async authorize(credentials) {
@@ -28,27 +28,29 @@ export const authOptions = {
         return {
           id: user._id.toString(),
           name: user.name,
-          email: user.email,
+          email: user.email
         };
-      },
-    }),
+      }
+    })
   ],
 
   callbacks: {
     async jwt({ token, user }) {
-      if (user) token.id = user.id;
+      if (user) {
+        token.id = user.id;
+      }
       return token;
     },
 
     async session({ session, token }) {
       session.user.id = token.id;
       return session;
-    },
+    }
   },
 
   pages: {
-    signIn: "/login",
-  },
+    signIn: "/login"
+  }
 };
 
 const handler = NextAuth(authOptions);

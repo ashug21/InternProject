@@ -1,0 +1,49 @@
+.page {
+    padding: 20px;
+    background: #ffffff;
+    color: #111827;
+  }
+  
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .empty {
+    color: #6b7280;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .card {
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+  }
+  
+  .title {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  
+  .text {
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .date {
+    font-size: 13px;
+    color: #6b7280;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 8px;
+  }
+  
