@@ -17,10 +17,20 @@
 
   1) /api/users  -> To add a user (POST)
   2) /api/users/:id  -> Get user details (GET)
-  3) /api/expenses   -> To add an expense (POST)
+  3) /api/users/id/expenses  (POST)  -> To add an expense (POST)
   4) /api/users/id/expenses (GET) -> Use mongodb atlas id to get the details
   5) /api/users/id/summary (GET)  -> Use mongodb atlas id to get the details
 
 
-to check preload dataset
-login using email -> Dhruv@gmail.com in (project login)
+     in 3) while doing post use data like (to add expense use data format like this or copy this one only):
+
+     {
+    "title" : "Bought Game CD",
+    "amount" : 2500,
+    "category" : "Personal",
+    "date" : "2026-01-31T00:00:00.000Z"
+     }
+
+
+to check preload dataset and email that i used to check code is : 
+login using email -> Dhruv@gmail.com  (in project login)
