@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ -> Project is setup using Nextjs , Mongoose , Mongodb atlas , Express , Made minimal frontend 
 
-## Getting Started
+ -> NOTE: Project is hosted on mongodb atlas as email : mixxtoo704@gmail.com
+                                      pass : Harjap2009
+      Made 2 collections named expenses and users
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-> routes details frontend :
+  Home -> Shows Homepage (/)
+  Expense -> Lets User add expense , only if they are logged in (/expenses)
+  Expense List -> Lets user see their added expenses  (/totalexpenses)
+  Signup -> signup user with name , email and monthlyBudget , (/singup)
+  Login -> login user with only email (this will create JWT) 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+  -> routes details backend : 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  1) /api/users  -> To add a user (POST)
+  2) /api/users/:id  -> Get user details (GET)
+  3) /api/expenses   -> To add an expense (POST)
+  4) /api/users/id/expenses (GET) -> Use mongodb atlas id to get the details
+  5) /api/users/id/summary (GET)  -> Use mongodb atlas id to get the details
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+to check preload dataset
+login using email -> Dhruv@gmail.com in (project login)
